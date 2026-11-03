@@ -108,7 +108,25 @@
     </audio>
   </main>
   <script src="js/invitacion.js"></script>
-  
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById("bgAudio");
+    const btn = document.getElementById("musicToggleBtn");
+    const icon = document.getElementById("musicIcon");
+
+    if (btn && audio) {
+      btn.addEventListener("click", function() {
+        if (audio.paused) {
+          audio.play();
+          icon.textContent = "⏸"; // Cambia a pausa cuando está sonando
+        } else {
+          audio.pause();
+          icon.textContent = "▶"; // Cambia a play cuando se detiene
+        }
+      });
+    }
+  });
+</script>
   
 </body>
 </html>
