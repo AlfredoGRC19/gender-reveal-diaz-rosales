@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7eddd">
+  <meta name="description" content="Una invitación muy especial para celebrar una dulce espera.">
+  <title>Gender Reveal | Díaz Rosales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <main class="phone-wrapper">
+    <!-- PORTADA ORIGINAL: se conserva el diseño que ya aprobaste -->
+    <section class="cover-screen" id="cover-screen" aria-label="Portada de la invitación">
+      <button class="envelope-hotspot" id="openInvitation" type="button" aria-label="Abrir invitación"></button>
+      <p class="cover-hint">Toca el sello para descubrir la invitación</p>
+    </section>
+
+    <!-- INTERIOR DE LA INVITACIÓN -->
+    <section class="invitation-screen" id="invitation-screen" aria-label="Invitación familiar" aria-hidden="true">
+      <div class="watercolor-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">UNA NUEVA AVENTURA ESTÁ POR COMENZAR</p>
+          <p class="script-intro">Una dulce espera</p>
+          <h1>GENDER <span>Reveal</span></h1>
+          <div class="gold-divider"><span>✦</span></div>
+          <p class="hero-message">Hay momentos que se vuelven eternos.<br>Queremos vivir este contigo.</p>
+        </div>
+      </div>
+
+      <div class="invitation-content">
+        <div class="welcome-card">
+          <span class="card-kicker">CON MUCHO CARIÑO</span>
+          <h2>La familia <em>Díaz Rosales</em></h2>
+          <p>te invita a compartir la emoción de conocer<br>una de las sorpresas más bonitas de la vida.</p>
+          <span class="tiny-heart">♡</span>
+        </div>
+
+        <figure class="family-photo-card">
+          <div class="photo-frame">
+            <img src="img/foto-familia.jpg" alt="Fotografía de la familia Díaz Rosales">
+          </div>
+          <figcaption>Un amor que crece y una historia que continúa</figcaption>
+        </figure>
+
+        <section class="event-section" aria-labelledby="countdown-title">
+          <p class="section-kicker">GUARDA ESTE MOMENTO</p>
+          <h2 id="countdown-title">La cuenta regresiva</h2>
+          <div class="countdown-card" id="countdown-card">
+            <div class="countdown" id="countdown" hidden>
+              <div><strong id="days">00</strong><small>DÍAS</small></div>
+              <span class="count-separator">:</span>
+              <div><strong id="hours">00</strong><small>HORAS</small></div>
+              <span class="count-separator">:</span>
+              <div><strong id="minutes">00</strong><small>MINUTOS</small></div>
+              <span class="count-separator">:</span>
+              <div><strong id="seconds">00</strong><small>SEGUNDOS</small></div>
+            </div>
+            <p class="pending-note" id="pending-date" hidden></p>
+          </div>
+        </section>
+
+        <section class="event-section details-section">
+          <p class="section-kicker">NOS ENCANTARÍA QUE NOS ACOMPAÑARAS</p>
+          <h2>Detalles del evento</h2>
+          <div class="detail-card">
+            <div class="detail-icon">✧</div>
+            <div><span>FECHA Y HORA</span><strong id="event-date-label">Domingo 6 de diciembre de 2026 · 10:00 a. m.</strong></div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon">⌖</div>
+            <div><span>LUGAR</span><strong id="event-place-label">Valle del Conejo</strong></div>
+          </div>
+          <a class="map-button" href="https://maps.app.goo.gl/t8Ar6yi7hh43YfmBA" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps ↗</a>
+        </section>
+
+        <section class="rsvp-card">
+          <span class="rsvp-flower">✿</span>
+          <p class="section-kicker">TU PRESENCIA HARÁ ESTE DÍA AÚN MÁS BONITO</p>
+          <h2>¿Nos acompañas?</h2>
+          <p>Nos dará muchísima alegría compartir este momento contigo.</p>
+          <div class="rsvp-actions">
+            <a class="rsvp-button" href="https://wa.me/525587955570?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20Gender%20Reveal.%20%F0%9F%92%9B" target="_blank" rel="noopener noreferrer">Confirmar con mamá</a>
+            <a class="rsvp-button rsvp-button-secondary" href="https://wa.me/525535511053?text=Hola%2C%20confirmo%20mi%20asistencia%20al%20Gender%20Reveal.%20%F0%9F%92%99" target="_blank" rel="noopener noreferrer">Confirmar con papá</a>
+          </div>
+        </section>
+
+        <footer class="closing">
+          <span>Con amor,</span>
+          <strong>Díaz Rosales</strong>
+          <div class="gold-divider"><span>♡</span></div>
+          <small>UN PEQUEÑO MILAGRO, UNA GRAN FELICIDAD</small>
+        </footer>
+      </div>
+    </section>
+    
+    <!-- 👇 AGREGA ESTOS DOS ELEMENTOS AQUÍ ADENTRO DE <main class="phone-wrapper"> -->
+    <button class="music-toggle-btn" id="musicToggleBtn" aria-label="Reproducir o pausar música">
+      <span id="musicIcon">🎵</span>
+    </button>
+
+    <audio id="bgAudio" loop>
+      <source src="audio/sparks.mp3" type="audio/mpeg">
+      Tu navegador no soporta elementos de audio.
+    </audio>
+  </main>
+  <script src="js/invitacion.js"></script>
+  
+  
+</body>
+</html>

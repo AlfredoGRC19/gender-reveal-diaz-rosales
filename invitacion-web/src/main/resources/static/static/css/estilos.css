@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { min-height: 100vh; display: flex; justify-content: center; align-items: center; overflow-x: hidden; background: #eee8dc; color: #786653; font-family: 'Montserrat', sans-serif; }
+.phone-wrapper { position: relative; width: min(100vw, 420px); height: min(100dvh, 872px); min-height: 620px; overflow: hidden; background: #fdfbf7; box-shadow: 0 10px 35px #55463326; }
+.cover-screen { position: absolute; inset: 0; z-index: 20; background: url('../img/portada-base.png') center center / 100% 100% no-repeat; opacity: 1; visibility: visible; transition: opacity .9s ease, visibility .9s ease; }
+.cover-screen.fade-out { opacity: 0; visibility: hidden; pointer-events: none; }
+/* El área pulsable coincide con el sobre que ya está dibujado en portada-base.png. */
+.envelope-hotspot { position: absolute; left: 12%; top: 42%; width: 76%; height: 24%; border: 0; border-radius: 8px; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.envelope-hotspot:focus-visible { outline: 3px solid #bd974e; outline-offset: 4px; }
+.invitation-screen { position: absolute; inset: 0; z-index: 10; overflow-y: auto; overscroll-behavior: contain; padding: 22px 22px 35px; text-align: center; background: #fffdf8; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity .8s ease, transform .8s ease, visibility .8s; }
+.invitation-screen.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.balloon-art { position: relative; width: 210px; height: 155px; margin: 0 auto 8px; }
+.balloon-cluster { position: absolute; top: 4px; left: 50%; transform: translateX(-50%); width: 180px; height: 105px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0; filter: drop-shadow(0 4px 3px #b99a5b45); }
+.balloon-cluster span { display: block; width: 43px; height: 48px; margin: -3px -5px; border-radius: 50% 50% 45% 45%; background: radial-gradient(circle at 32% 25%, #fffdf4 0 9%, #ead9b5 35%, #c8a66b 100%); border: 1px solid #d4bd91; }
+.balloon-cluster span:nth-child(3n) { background: radial-gradient(circle at 32% 25%, #fff 0 8%, #d7bd8b 45%, #b58b4b 100%); }
+.balloon-strings { position: absolute; top: 94px; left: 50%; width: 70px; height: 42px; transform: translateX(-50%); border-left: 1px solid #b89a63; border-right: 1px solid #b89a63; border-bottom: 1px solid #b89a63; }
+.teddy { position: absolute; top: 103px; left: 50%; transform: translateX(-50%); font-size: 43px; line-height: 1; }
+.top-titles, .script-row { display: flex; justify-content: space-around; align-items: center; }
+.top-titles { color: #9e8c75; font-size: 10px; letter-spacing: 2px; font-weight: 500; }
+.script-row { margin: -2px 0 -5px; color: #9b8264; font-family: 'Great Vibes', cursive; font-size: 25px; }
+.gender-title { margin: 0; color: #c5a059; font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: .95; letter-spacing: 2px; font-weight: 500; }
+.reveal-title { color: #a88b60; font-family: 'Great Vibes', cursive; font-size: 49px; line-height: 1.05; }
+.music-button { display: block; width: 48px; height: 48px; margin: 13px auto 4px; border-radius: 50%; border: 2px solid #d3b36e; background: #f5ead0; color: #b38d48; font-size: 17px; cursor: pointer; box-shadow: 0 3px 10px #b89a6333; }
+.music-caption { margin: 0 0 12px; color: #9e8c75; font-size: 8px; letter-spacing: 2px; }
+.welcome-message { margin: 10px 0; color: #82715e; font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; line-height: 1.35; }
+.baby-word { margin: 10px 0 5px; color: #b18e52; font-size: 15px; letter-spacing: 5px; }
+.family-ribbon { display: inline-block; padding: 7px 25px; background: #e7d2a9; color: #80694d; font-family: 'Great Vibes', cursive; font-size: 27px; border-top: 1px dashed #b99554; border-bottom: 1px dashed #b99554; }
+.inner-photo { width: 125px; margin: 15px auto 8px; padding: 5px 5px 12px; background: white; box-shadow: 0 4px 12px #00000018; transform: rotate(-3deg); }
+.inner-photo img { display: block; width: 100%; height: 105px; object-fit: cover; object-position: center 35%; }
+.section-title { display: inline-block; margin: 17px 0 9px; padding-bottom: 4px; border-bottom: 1px solid #e5d9c7; color: #8d7a64; font-size: 11px; letter-spacing: 2px; font-weight: 600; }
+.countdown { display: flex; justify-content: center; gap: 13px; padding: 12px 7px; border-radius: 10px; background: #f7f1e7; }
+.countdown div { display: flex; flex-direction: column; gap: 3px; min-width: 48px; }
+.countdown strong { color: #bd984e; font-size: 22px; }
+.countdown small { color: #8d7a64; font-size: 8px; letter-spacing: 1px; }
+.action-button { display: block; width: 88%; margin: 8px auto; padding: 11px 12px; border-radius: 25px; background: #c5a059; color: white; text-decoration: none; font-size: 11px; letter-spacing: .5px; }
+.whatsapp-button { background: #8caa78; }
+.event-name { margin: 4px 0; font-weight: 600; font-size: 13px; }
+.event-detail { margin: 4px 0 8px; color: #82715e; font-size: 11px; }
+.closing-message { margin: 22px 0 8px; color: #bd984e; font-family: 'Great Vibes', cursive; font-size: 36px; }
+.inner-decoration { position: absolute; z-index: 0; color: #eadfc9; pointer-events: none; }
+.clouds { font-size: 42px; opacity: .55; }
+.cloud-left { top: 180px; left: -17px; }
+.cloud-right { top: 350px; right: -17px; }
+.star { color: #d8bd83; font-size: 22px; }
+.star-one { top: 235px; left: 18px; }
+.star-two { top: 410px; right: 20px; }
+@media (max-height: 700px) { .invitation-screen { padding-top: 12px; } .balloon-art { transform: scale(.85); transform-origin: top center; margin-bottom: -12px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }

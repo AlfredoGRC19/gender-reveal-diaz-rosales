@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f1e7">
+  <title>Gender Reveal | Díaz Rosales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <main class="phone-wrapper">
+    <!-- PORTADA: usamos la composición que ya tienes como imagen de fondo -->
+    <section class="cover-screen" id="cover-screen" aria-label="Portada de la invitación">
+      <!-- Zona transparente colocada encima del sobre de la imagen -->
+      <button class="envelope-hotspot" id="openInvitation" type="button" aria-label="Abrir invitación"></button>
+    </section>
+
+    <!-- INTERIOR: aparece al tocar el sello del sobre -->
+    <section class="invitation-screen" id="invitation-screen" aria-label="Contenido de la invitación" aria-hidden="true">
+      <div class="inner-decoration clouds cloud-left">☁</div>
+      <div class="inner-decoration clouds cloud-right">☁</div>
+      <div class="inner-decoration star star-one">✦</div>
+      <div class="inner-decoration star star-two">✧</div>
+
+      <div class="balloon-art" aria-hidden="true">
+        <div class="balloon-cluster"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></div>
+        <div class="balloon-strings"></div>
+        <div class="teddy">🧸</div>
+      </div>
+
+      <div class="top-titles"><span>ESTAMOS</span><span>EN LA</span></div>
+      <div class="script-row"><span>Dulce</span><span>Espera</span></div>
+      <h1 class="gender-title">GENDER</h1>
+      <div class="reveal-title">Reveal</div>
+
+      <button class="music-button" id="musicButton" type="button" aria-label="Reproducir música" title="La música se agregará después">▶</button>
+      <p class="music-caption">DALE CLICK</p>
+
+      <p class="welcome-message">Un bebé está en camino...<br>y queremos compartir la sorpresa contigo</p>
+      <p class="baby-word">BABY</p>
+      <div class="family-ribbon">Díaz Rosales</div>
+
+      <div class="inner-photo"><img src="img/foto-familia.jpg" alt="Fotografía de la familia Díaz Rosales"></div>
+
+      <h2 class="section-title">¿CUÁNTO FALTA?</h2>
+      <div class="countdown" id="countdown">
+        <div><strong id="days">00</strong><small>DÍAS</small></div>
+        <div><strong id="hours">00</strong><small>HORAS</small></div>
+        <div><strong id="minutes">00</strong><small>MIN</small></div>
+        <div><strong id="seconds">00</strong><small>SEG</small></div>
+      </div>
+
+      <h2 class="section-title">AGENDA LA FECHA</h2>
+      <a class="action-button" id="calendarLink" href="https://calendar.google.com/" target="_blank" rel="noopener">📅 Agendar en calendario</a>
+
+      <h2 class="section-title">LUGAR Y HORA</h2>
+      <p class="event-name">Lugar por confirmar</p>
+      <p class="event-detail">Fecha y horario por confirmar</p>
+      <a class="action-button" id="mapsLink" href="https://maps.google.com/" target="_blank" rel="noopener">📍 Ver ubicación</a>
+
+      <h2 class="section-title">CONFIRMACIÓN DE ASISTENCIA</h2>
+      <a class="action-button whatsapp-button" id="whatsappLink" href="#" target="_blank" rel="noopener">💬 Confirmar asistencia</a>
+      <p class="closing-message">¡Te esperamos!</p>
+    </section>
+  </main>
+  <script src="js/invitacion.js"></script>
+</body>
+</html>
